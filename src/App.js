@@ -6,22 +6,22 @@ import './styles.css';
 
 const todos = [{
   task: 'Stare at ceiling',
-  id: Date.now(),
+  id: 123,
   completed: false
 },
 {
   task: 'Contemplate benefits of death vs. going to work',
-  id: Date.now(),
+  id: 124,
   completed: false
 },
 {
   task: 'Take shower',
-  id: Date.now(),
+  id: 125,
   completed: false
 },
 {
   task: 'One more day',
-  id: Date.now(),
+  id: 126,
   completed: false
 }]
 

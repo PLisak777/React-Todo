@@ -25,7 +25,8 @@ handleSubmit = (e) => {
                 <input 
                 type='text'
                 name='todo'
-                value={this.state.todo}
+                placeholder='Add New Todo'
+                value={this.state.todos}
                 onChange={this.handleChange}
                 />  
                 <button onClick={this.addTodo}>Add</button>      

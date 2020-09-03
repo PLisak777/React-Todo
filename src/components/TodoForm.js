@@ -27,7 +27,8 @@ handleSubmit = (e) => {
                 name='todo'
                 value={this.state.todo}
                 onChange={this.handleChange}
-                />        
+                />  
+                <button onClick={this.addTodo}>Add</button>      
             </form>
         )
     }

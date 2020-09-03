@@ -2,13 +2,15 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
+import './styles.css';
+
 const todos = [{
   task: 'Stare at ceiling',
   id: Date.now(),
   completed: false
 },
 {
-  task: 'Contemplate suicide vs. work',
+  task: 'Contemplate benefits of death vs. going to work',
   id: Date.now(),
   completed: false
 },
@@ -34,31 +36,31 @@ class App extends React.Component {
   // design `App` to be the parent component of your application.
   toggleItem = (itemId) => {
     this.setState({
-      todos: this.state.todos.map((item) => {
-        if (item.id === itemId) {
+      todos: this.state.todos.map((todo) => {
+        if (todo.id === itemId) {
           return {
-            ...item, 
-            completed: !item.completed
+            ...todo, 
+            completed: !todo.completed
           }
         }
-        return item;
+        return todo;
       })
     })
   }
 
-addTodo = (itemName) => {
+addTodo = (todoName) => {
   this.setState({
     todos: [
       ...this.state.todos,
-      {task: itemName, id: Date.now(), completed: false}
+      {task: todoName, id: Date.now(), completed: false}
     ]
   })
 }
 
 clearCompleted = () => {
   this.setState({
-    todos: this.state.todos.filter((item) => {
-      return !item.completed;
+    todos: this.state.todos.filter((todo) => {
+      return !todo.completed;
     })
   })
 }

@@ -17,6 +17,9 @@ handleChange = (e) => {
 handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state.todo)
+    this.setState({
+        todo: ''
+    })
 }
 
     render() {
@@ -26,10 +29,13 @@ handleSubmit = (e) => {
                 type='text'
                 name='todo'
                 placeholder='Add New Todo'
-                value={this.state.todos}
+                value={this.state.todo}
                 onChange={this.handleChange}
                 />  
-                <button onClick={this.addTodo}>Add</button>      
+                <button 
+                onClick={this.addTodo}>
+                    Add
+                </button>      
             </form>
         )
     }
